@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import FeedbackOptions from "./components/FeedbackOptions";
@@ -12,6 +12,10 @@ function App() {
     neutral: 0,
     bad: 0,
   });
+
+  useEffect(() => {
+    document.title = "Feedback Widget";
+  }, []);
 
   const options = ["good", "neutral", "bad"];
 
